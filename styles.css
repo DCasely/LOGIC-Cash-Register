@@ -1,0 +1,34 @@
+/* font-family: 'Indie Flower', cursive;
+font-family: 'Lobster', cursive; */
+
+body {
+  font-family: 'Indie Flower', cursive;
+}
+
+.container-fluid {
+  background: rgb(171, 171, 171);
+  background: radial-gradient(
+    circle,
+    rgba(171, 171, 171, 1) 0%,
+    rgba(11, 73, 4, 1) 100%
+  );
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+p {
+  font-family: 'Lobster', cursive;
+  font-size: 1.5rem;
+}
+
+.inputs {
+  display: block;
+  margin: 1rem auto;
+  font-size: 1.5rem;
+}
