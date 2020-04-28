@@ -149,20 +149,25 @@
             </form>
 
             <h2 id="result">Cash Register Status:</h2>
-            <h3>
-              <span>Status: "INSUFFICIENT_FUNDS"</span> if cash-in-drawer is
-              less than the change due, or if you cannot return the exact
-              change.
-            </h3>
-            <h3>
-              <span>Status: "CLOSED"</span> if the change you provide is exactly
-              the amount you have left in the register
-            </h3>
 
-            <h3>
-              <span>Status: "OPEN"</span> if you were able to provide exact
-              change.
-            </h3>
+            <div class="container details">
+              <h3>Status: "INSUFFICIENT_FUNDS":</h3>
+              <p>
+                "INSUFFICIENT_FUNDS" if cash-in-drawer is less than the change
+                due, or if you cannot return the exact change.
+              </p>
+
+              <h3>Status: "CLOSED":</h3>
+              <p>
+                "CLOSED" if the change you provide is exactly the amount you
+                have left in the register
+              </p>
+
+              <h3>Status: "OPEN":</h3>
+              <p>
+                "OPEN" if you were able to provide exact change.
+              </p>
+            </div>
           </div>
         </div>
       </div>
