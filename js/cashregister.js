@@ -3,7 +3,8 @@ const reset = document.querySelector('#reset');
 const priceInput = document.querySelector('#price-input');
 const cashInput = document.querySelector('#cash-input');
 const result = document.querySelector('#result');
-const cashDrawer = document.querySelector('#cash-drawer');
+const cashDrawerCoins = document.querySelector('#cash-drawer-coins');
+const cashDrawerBills = document.querySelector('#cash-drawer-bills');
 let registerStatus = [];
 
 function resetDrawer() {
@@ -29,7 +30,9 @@ function resetDrawer() {
   let twenties = registerStatus[7][1];
   let hundreds = registerStatus[8][1];
 
-  cashDrawer.innerHTML = `Pennies: $${pennies} | Nickels: $${nickels} | Dimes: $${dimes} | Quarters: $${quarters} | Ones: $${ones} | Fives: $${fives} | Tens: $${tens} | Twenties: $${twenties} | Hundreds: $${hundreds}`;
+  cashDrawerCoins.innerHTML = `Pennies: $${pennies} | Nickels: $${nickels} | Dimes: $${dimes} | Quarters: $${quarters}`;
+
+  cashDrawerBills.innerHTML = `Ones: $${ones} | Fives: $${fives} | Tens: $${tens} | Twenties: $${twenties} | Hundreds: $${hundreds}`;
 
   return registerStatus;
 }

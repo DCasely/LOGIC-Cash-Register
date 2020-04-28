@@ -113,8 +113,10 @@
               RESET BANK
             </button>
 
-            <p id="cash-drawer">
-              Pennies: $0.37 | Nickels: $0.55 | Dimes: $0.90 | Quarters: $1.75 |
+            <p id="cash-drawer-coins">
+              Pennies: $0.37 | Nickels: $0.55 | Dimes: $0.90 | Quarters: $1.75
+            </p>
+            <p id="cash-drawer-bills">
               Ones: $17.00 | Fives: $25.00 | Tens: $30.00 | Twenties: $80.00 |
               Hundreds: $200.00
             </p>
@@ -141,6 +143,20 @@
             </form>
 
             <h2 id="result">Cash Register Status:</h2>
+            <h3>
+              <span>Status: "INSUFFICIENT_FUNDS"</span> if cash-in-drawer is
+              less than the change due, or if you cannot return the exact
+              change.
+            </h3>
+            <h3>
+              <span>Status: "CLOSED"</span> if the change you provide is exactly
+              the amount you have left in the register
+            </h3>
+
+            <h3>
+              <span>Status: "OPEN"</span> if you were able to provide exact
+              change.
+            </h3>
           </div>
         </div>
       </div>
