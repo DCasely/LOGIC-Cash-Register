@@ -22,13 +22,40 @@ h1 {
   font-size: 5rem;
 }
 
-p {
-  font-family: 'Lobster', cursive;
+button {
+  margin: 2.5%;
   font-size: 1.5rem;
+  width: 50%;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+button:active {
+  transform: scale(0.9);
+}
+
+p {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
 }
 
 .inputs {
   display: block;
   margin: 1rem auto;
-  font-size: 1.5rem;
+  font-size: 2rem;
+}
+
+#submit {
+  background-color: green;
+  color: #000;
+}
+
+#submit:hover {
+  transform: scale(1.1);
+}
+
+#submit:active {
+  transform: scale(0.9);
 }

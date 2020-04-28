@@ -1,3 +1,62 @@
+const form = document.querySelector('form');
+const reset = document.querySelector('#reset');
+const priceInput = document.querySelector('#price-input');
+const cashInput = document.querySelector('#cash-input');
+const result = document.querySelector('#result');
+const cashDrawer = document.querySelector('#cash-drawer');
+let registerStatus = [];
+
+function resetDrawer() {
+  registerStatus = [
+    ['PENNY', (Math.round(Math.random() * 100) / 100).toFixed(2)],
+    ['NICKEL', ((Math.round(Math.random() * 10) * 5) / 100).toFixed(2)],
+    ['DIME', ((Math.round(Math.random() * 100) * 10) / 100).toFixed(2)],
+    ['QUARTER', ((Math.round(Math.random() * 50) * 25) / 100).toFixed(2)],
+    ['ONE', Math.round(Math.random() * 20).toFixed(2)],
+    ['FIVE', (Math.round(Math.random() * 10) * 5).toFixed(2)],
+    ['TEN', (Math.round(Math.random() * 10) * 10).toFixed(2)],
+    ['TWENTY', (Math.round(Math.random() * 10) * 20).toFixed(2)],
+    ['ONE HUNDRED', (Math.round(Math.random() * 5) * 100).toFixed(2)],
+  ];
+
+  let pennies = registerStatus[0][1];
+  let nickels = registerStatus[1][1];
+  let dimes = registerStatus[2][1];
+  let quarters = registerStatus[3][1];
+  let ones = registerStatus[4][1];
+  let fives = registerStatus[5][1];
+  let tens = registerStatus[6][1];
+  let twenties = registerStatus[7][1];
+  let hundreds = registerStatus[8][1];
+
+  cashDrawer.innerHTML = `Pennies: $${pennies} | Nickels: $${nickels} | Dimes: $${dimes} | Quarters: $${quarters} | Ones: $${ones} | Fives: $${fives} | Tens: $${tens} | Twenties: $${twenties} | Hundreds: $${hundreds}`;
+
+  return registerStatus;
+}
+
+resetDrawer();
+
+// RESET DRAWER
+reset.addEventListener('click', resetDrawer);
+
+form.addEventListener('submit', (e) => {
+  // GET INPUT VARIABLES
+  let priceOfItem = priceInput.value;
+  let cashTendered = cashInput.value;
+
+  // RUN VARIABLES THROUGH CASH REGISTER FUNCTIONS
+  let register = checkCashRegister(priceOfItem, cashTendered, registerStatus);
+
+  // DISPLAY RESULTS
+  result.innerHTML = `Cash Register Status: ${register.status}`;
+
+  e.preventDefault();
+});
+
+// ==================================================
+// CASH REGISTER FUNCTION
+// ==================================================
+
 function checkCashRegister(price, cash, cid) {
   // CREATE A FUNCTION TO GET RID OF JS INACCURACIES
   function monetize(x) {
@@ -214,16 +273,16 @@ function checkCashRegister(price, cash, cid) {
 //   ])
 // );
 
-console.log(
-  checkCashRegister(19.5, 20, [
-    ['PENNY', 0.5],
-    ['NICKEL', 0],
-    ['DIME', 0],
-    ['QUARTER', 0],
-    ['ONE', 0],
-    ['FIVE', 0],
-    ['TEN', 0],
-    ['TWENTY', 0],
-    ['ONE HUNDRED', 0],
-  ])
-);
+// console.log(
+//   checkCashRegister(19.5, 20, [
+//     ['PENNY', 0.5],
+//     ['NICKEL', 0],
+//     ['DIME', 0],
+//     ['QUARTER', 0],
+//     ['ONE', 0],
+//     ['FIVE', 0],
+//     ['TEN', 0],
+//     ['TWENTY', 0],
+//     ['ONE HUNDRED', 0],
+//   ])
+// );

@@ -104,13 +104,43 @@
           <div class="col text-center">
             <h1>LOGIC: Cash Register</h1>
 
+            <h2>
+              Can You Provide Your Exact Change Based Off The Values In Your
+              Cash Drawer?
+            </h2>
+
+            <button id="reset" class="btn btn-dark btn-lg">
+              RESET BANK
+            </button>
+
+            <p id="cash-drawer">
+              Pennies: $0.37 | Nickels: $0.55 | Dimes: $0.90 | Quarters: $1.75 |
+              Ones: $17.00 | Fives: $25.00 | Tens: $30.00 | Twenties: $80.00 |
+              Hundreds: $200.00
+            </p>
+
             <form action="">
-              <input class="inputs" type="text" placeholder="Price of Item" />
-              <input class="inputs" type="text" placeholder="Cash Tendered" />
-              <input class="inputs" type="submit" value="submit" />
+              <input
+                id="price-input"
+                class="inputs"
+                type="text"
+                placeholder="Price of Item"
+              />
+              <input
+                id="cash-input"
+                class="inputs"
+                type="text"
+                placeholder="Cash Tendered"
+              />
+              <input
+                id="submit"
+                class="inputs btn"
+                type="submit"
+                value="SUBMIT"
+              />
             </form>
 
-            <h2>Cash Register Status:</h2>
+            <h2 id="result">Cash Register Status:</h2>
           </div>
         </div>
       </div>
