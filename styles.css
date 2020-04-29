@@ -34,6 +34,7 @@ nav {
 h1 {
   font-family: 'Lobster', cursive;
   font-size: 3rem;
+  padding-top: 5rem;
 }
 
 h2 {
@@ -68,6 +69,10 @@ p {
   font-weight: 600;
   max-width: 50rem;
   margin: 1rem auto;
+}
+
+.details {
+  padding-bottom: 5rem;
 }
 
 .details p {
