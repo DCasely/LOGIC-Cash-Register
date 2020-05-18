@@ -34,7 +34,9 @@ function resetDrawer() {
 
   cashDrawerBills.innerHTML = `Ones: $${ones} | Fives: $${fives} | Tens: $${tens} | Twenties: $${twenties} | Hundreds: $${hundreds}`;
 
-  return registerStatus;
+  // RESET INPUTS
+  priceInput.value = '';
+  cashInput.value = '';
 }
 
 resetDrawer();
